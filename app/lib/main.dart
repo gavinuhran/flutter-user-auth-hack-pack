@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'authentication/login_part.dart';
+import 'authentication/login_page.dart';
 import 'authentication/signup_page.dart';
 import 'protected_pages/dashboard_page.dart';
 

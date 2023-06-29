@@ -39,8 +39,8 @@ dependencies:
   # The http package is used for making HTTP requests to your backend API
   http: ^0.13.4
 
-  # The shared_preferences is used for storing user authentication data locally
-  shared_preferences: ^2.0.11
+  # The shared_preferences package provides a way to store sensitive data securely on the device. Used for storing user authentication token.
+  flutter_secure_storage: ^5.0.2
 
 dev_dependencies:
   flutter_test:

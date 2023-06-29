@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import '../services/api_service.dart';
+import '../services/auth_service.dart';
 
 class LoginPage extends StatelessWidget {
-  final ApiService apiService = ApiService();
+  final AuthService authService = AuthService();
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   Future<void> _login(BuildContext context) async {
     try {
-      final String token = await apiService.loginUser(
+      final String token = await authService.loginUser(
           emailController.text, passwordController.text);
 
       // Save the token to shared preferences or secure storage

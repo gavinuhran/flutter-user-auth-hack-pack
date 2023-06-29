@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../services/api_service.dart';
+import '../services/auth_service.dart';
 
 class SignUpPage extends StatelessWidget {
-  final ApiService apiService = ApiService();
+  final AuthService authService = AuthService();
 
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
@@ -11,7 +11,7 @@ class SignUpPage extends StatelessWidget {
 
   Future<void> _signUp(BuildContext context) async {
     try {
-      final String token = await apiService.signUpUser(
+      final String token = await authService.signUpUser(
           firstNameController.text, lastNameController.text, emailController.text, passwordController.text);
 
       // Save the token to shared preferences or secure storage
