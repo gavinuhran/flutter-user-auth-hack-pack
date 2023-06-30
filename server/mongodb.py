@@ -11,7 +11,7 @@ CLIENT = MongoClient(f'mongodb+srv://{os.getenv("MONGODB_USERNAME")}:{os.getenv(
 def create_new_user(firstName, lastName, email, hashed_password):
 
     # Database and collection information
-    db = CLIENT['FitGenius']
+    db = CLIENT[os.getenv("MONGODB_DATABASE")]
     users_collection = db['users']  # Collection for storing user information
 
     # Check if the user already exists
@@ -24,7 +24,7 @@ def create_new_user(firstName, lastName, email, hashed_password):
     
 def get_user(email):
     # Database and collection information
-    db = CLIENT['FitGenius']
+    db = CLIENT[os.getenv("MONGODB_USERNAME")]
     users_collection = db['users']  # Collection for storing user information
 
     # Find the user in the database
