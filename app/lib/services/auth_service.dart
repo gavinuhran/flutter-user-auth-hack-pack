@@ -55,4 +55,12 @@ class AuthService {
       throw Exception('Token not found');
     }
   }
+
+  Future<bool> isAuthenticated() async {
+    // Retrieve the token
+    final token = await storage.read(key: 'token');
+
+    // Check if the token is available and not empty
+    return token != null && token.isNotEmpty;
+  }
 }

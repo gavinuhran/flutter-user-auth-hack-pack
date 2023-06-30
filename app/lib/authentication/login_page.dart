@@ -7,6 +7,8 @@ class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  LoginPage({super.key});
+
   Future<void> _login(BuildContext context) async {
     try {
       final String token = await authService.loginUser(

@@ -40,7 +40,7 @@ dependencies:
   http: ^0.13.4
 
   # The shared_preferences package provides a way to store sensitive data securely on the device. Used for storing user authentication token.
-  flutter_secure_storage: ^5.0.2
+  flutter_secure_storage: ^8.0.0
 
 dev_dependencies:
   flutter_test:

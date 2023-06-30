@@ -62,7 +62,7 @@ def getUser():
         return jsonify({'message': 'Missing token'}), 401
 
     try:
-        decoded_token = jwt.decode(token, os.getenv('secret-auth-key'), algorithms=['HS256'])
+        decoded_token = jwt.decode(token, str(os.getenv('secret-auth-key')), algorithms=['HS256'])
         email = decoded_token.get('email')
 
         # Fetch user data from the database based on the email

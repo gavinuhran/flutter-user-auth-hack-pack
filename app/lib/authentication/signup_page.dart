@@ -9,6 +9,8 @@ class SignUpPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  SignUpPage({super.key});
+
   Future<void> _signUp(BuildContext context) async {
     try {
       final String token = await authService.signUpUser(
